@@ -85,7 +85,7 @@ X_test = test.drop(columns=["id", "lead_code"])
 
 test_probs = model.predict(X_test)
 
-# Clip values between 0 and 1 (VERY IMPORTANT)
+
 test_probs = test_probs.clip(0, 1)
 
 submission = pd.DataFrame({
